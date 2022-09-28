@@ -4,9 +4,9 @@
 #include <condition_variable>
 #include <mutex>
 using namespace std;
-#if 0
+#if 1
 
-#if 0
+#if 1
 // 任务队列类
 class TaskQueue
 {
@@ -14,31 +14,46 @@ public:
     // 添加数据
     void put(const int& task)
     {
-        unique_lock<mutex> locker(myMutex);
-        while (taskQueue.size() == maxSize)
+        while(1)
         {
-            notFull.wait(locker);
+            unique_lock<mutex> locker(myMutex);
+            while (taskQueue.size() == maxSize)
+            {
+                cout<<"TaskQueue is full\n";
+                notFull.wait(locker);
+            }
+            taskQueue.push(task);
+            // cout << "添加任务: " << task << ", 线程ID: " << this_thread::get_id() << endl;
+            cout<<"input_thread:  "<<this_thread::get_id()<<"\tTaskQueue size: "<<taskQueue.size()<<endl;
+            // 唤醒消费者
+            notEmpty.notify_one();
+
+            this_thread::sleep_for(chrono::milliseconds(50));
         }
-        taskQueue.push(task);
-        cout << "添加任务: " << task << ", 线程ID: " << this_thread::get_id() << endl;
-        // 唤醒消费者
-        notEmpty.notify_one();
+
     }
 
     // 取数据
     void take()
     {
-        unique_lock<mutex> locker(myMutex);
-        while (taskQueue.empty())
+        while(1)
         {
-            notEmpty.wait(locker);
-        }
+            unique_lock<mutex> locker(myMutex);
+            while (taskQueue.empty())
+            {
+                cout<<"TaskQueue is empty\n";
+                notEmpty.wait(locker);
+            }
 
-        int node = taskQueue.front();
-        taskQueue.pop();
-        cout << "删除任务: " << node << ", 线程ID: " << this_thread::get_id() << endl;
-        // 唤醒生产者
-        notFull.notify_all();
+            int node = taskQueue.front();
+            taskQueue.pop();
+            // cout << "删除任务: " << node << ", 线程ID: " << this_thread::get_id() << endl;
+            cout<<"output_thread: "<<this_thread::get_id()<<"\tTaskQueue size: "<<taskQueue.size()<<endl;
+            // 唤醒生产者
+            notFull.notify_all();
+
+            this_thread::sleep_for(chrono::milliseconds(50));
+        }
     }
 
     bool isFull()
@@ -67,7 +82,7 @@ public:
         return taskQueue.size();
     }
 private:
-    int maxSize = 100;
+    int maxSize = 10;
     queue<int> taskQueue;
     mutex myMutex;
     condition_variable notFull;     // 生产者
@@ -142,22 +157,24 @@ private:
 };
 #endif
 
-int main12345678()
+int main()
 {
-    thread t1[5];
-    thread t2[5];
+    thread t1[10];
+    thread t2[2];
     TaskQueue taskQ;
-    for (int i = 0; i < 5; ++i)
+    for (int i = 0; i < 10; ++i)
     {
         t1[i] = thread(&TaskQueue::put, &taskQ, 100+i);
+    }
+
+        for (int i = 0; i < 2; ++i)
+    {
         t2[i] = thread(&TaskQueue::take, &taskQ);
     }
 
-    for (int i = 0; i < 5; ++i)
-    {
-        t1[i].join();
-        t2[i].join();
-    }
+    for (int i = 0; i < 10; ++i)    {t1[i].join();}
+    for (int i = 0; i < 2; ++i)     {t2[i].join();}
+
     return 0;
 }
 

@@ -26,6 +26,15 @@ void Person::Static_msg()
     std::cout<<"*******\t"<<m_num<<std::endl;
 }
 
+class Test
+{
+public:
+    void print_test(int a)
+    {
+        std::cout<<a<<std::endl;
+    }
+};
+
 
 void func()
 {
@@ -40,13 +49,15 @@ int main()
 
     Person p1("Tom",18);
     std::thread t1(&Person::Person_msg,p1);
-
     std::thread t2(&Person::Static_msg);
 
+    Test ts1;
+    std::thread t3(&Test::print_test,ts1,888);
 
     t0.join();
     t1.join();
     t2.join();
+    t3.join();
 
     return 0;
 }
