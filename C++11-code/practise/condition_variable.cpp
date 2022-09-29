@@ -1,82 +1,43 @@
 #include <iostream>
 #include <thread>
-#include <mutex>
-#include <vector>
-#include <condition_variable>
 #include <chrono>
+#include <mutex>
+#include <condition_variable>
 using namespace std;
 
-class TaskVector
+mutex mx;
+condition_variable host;
+
+void func1()
 {
-public:
-    void input(const int &num)
-    {
-        while (1)
-        {
-            unique_lock<mutex> locker(mx);          
-            // if (Task.size() == max_size)         
-            while (Task.size() == max_size)
-            {   
-                cout<<"TaskVector is full\n";
-                producer.wait(locker);
-            }
-            Task.push_back(num);
-            consumer.notify_all();
+    mx.lock();                           //第一线程获得锁，在不解锁的情况下，后续线程无法获得锁
+    cout<<this_thread::get_id()<<endl;
+    // mx.unlock();
+}
 
-            cout<<"input_thread:  "<<this_thread::get_id()<<"\tTaskVector size: "<<Task.size()<<endl;
+void func2()
+{
+    unique_lock<mutex> locker(mx);      //第一个线程获得锁
+    cout<<this_thread::get_id()<<endl;
+    this_thread::sleep_for(chrono::seconds(1));
+    host.wait(locker);                  //进入wait()函数后会释放锁，并进入wait状态，等待notify
+}
 
-            this_thread::sleep_for(chrono::milliseconds(50));
-        }
-        
-    }
-
-    void output()
-    {
-        while (1)
-        {
-            unique_lock<mutex> locker(mx);
-            // if (Task.empty())
-            while (Task.empty())
-            {
-                cout<<"TaskVector is empty\n";
-                consumer.wait(locker);
-            }
-            Task.pop_back();
-            producer.notify_all();
-
-            cout<<"output_thread: "<<this_thread::get_id()<<"\tTaskVector size: "<<Task.size()<<endl;
-
-            this_thread::sleep_for(chrono::milliseconds(50));
-        }
- 
-    }
-
-private:
-    int max_size = 10;
-    vector<int> Task;
-    mutex mx;
-    condition_variable producer;
-    condition_variable consumer;
-};
+void func3()
+{
+    lock_guard<mutex> locker(mx);       //第一个线程获得锁，当函数结束时，lock_guard会解锁并析构掉mutex类
+    cout<<this_thread::get_id()<<endl;
+    this_thread::sleep_for(chrono::seconds(1));
+}
 
 int main()
-{
-    TaskVector taskDemo;
-    thread input_thread[10];
-    thread output_thread[2];
+{   
+    thread t[5];
 
-    for (int ii = 0;ii < 10;ii++)
-    {
-        input_thread[ii] = thread(&TaskVector::input,&taskDemo,188);
-    }
-
-    for(int jj = 0;jj < 2;jj++)
-    {
-        output_thread[jj] = thread(&TaskVector::output,&taskDemo);
-    }
-
-    for(int ii = 0;ii < 10;ii++)    {input_thread[ii].join();}
-    for(int jj = 0;jj < 2;jj++)     {output_thread[jj].join();}
+    // for(int i = 0;i < 5;i++) {t[i] = thread(func1);}
+    for(int i = 0;i < 5;i++) {t[i] = thread(func2);}
+    // for(int i = 0;i < 5;i++) {t[i] = thread(func3);}
+    for(int i = 0;i < 5;i++) {t[i].join();}
 
     return 0;
 }
