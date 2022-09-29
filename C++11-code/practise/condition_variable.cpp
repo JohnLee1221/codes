@@ -13,10 +13,11 @@ public:
     {
         while (1)
         {
-            unique_lock<mutex> locker(mx);          //为什么locker的定义，要在函数里面？不能定义在函数外面？
-            if (Task.size() >= max_size)
+            unique_lock<mutex> locker(mx);          
+            // if (Task.size() == max_size)         
+            while (Task.size() == max_size)
             {   
-                cout<<"TaskQueue is full\n";
+                cout<<"TaskVector is full\n";
                 producer.wait(locker);
             }
             Task.push_back(num);
@@ -34,9 +35,10 @@ public:
         while (1)
         {
             unique_lock<mutex> locker(mx);
-            if (Task.empty())
+            // if (Task.empty())
+            while (Task.empty())
             {
-                cout<<"TaskQueue is empty\n";
+                cout<<"TaskVector is empty\n";
                 consumer.wait(locker);
             }
             Task.pop_back();
