@@ -21,6 +21,13 @@
         "algorithm": "cpp",
         "*.tcc": "cpp",
         "memory": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "limits": "cpp",
+        "atomic": "cpp",
+        "cwchar": "cpp",
+        "exception": "cpp",
+        "iosfwd": "cpp",
+        "stdexcept": "cpp",
+        "streambuf": "cpp"
     }
 }

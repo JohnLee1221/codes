@@ -4,7 +4,10 @@ using namespace std;
 class Base
 {
 public:
-    Base() : m_num(10) {}
+    Base(int a) : m_num(a) 
+    {
+        cout<<m_num<<endl;
+    }
 
     static void test()
     {
@@ -20,7 +23,7 @@ string Base::m_str = "Hello";
 int main()
 {
     Base::test();
-    Base().test();
+    Base(10).test();
 
     return 0;
 }
