@@ -2,15 +2,24 @@
 #include<limits>
 using namespace std;
 
-void test(int mun,size_t maxNumberOfSamples = std::numeric_limits<size_t>::max())
+class Person
 {
-    cout<<"Hello"<<endl;
-}
+public:
+    Person(int a)
+    {
+        cout<<"construct function"<<"\t"<<a<<endl;
+    }
 
-int main(){
+    Person* test()
+    {
+        return this;
+    }
+};
 
-    int a = 10;
-    test(a);
+int main()
+{
+    Person p = Person(100);
+    Person(10).test();
 
     return 0;
 }

@@ -2,7 +2,7 @@
 #include <functional>
 using namespace std;
 
-#if 0
+#if 1
 // 1. 可调用对象
 // 1.1 函数指针
 using funcPtr1 = int(*)(int, double);
@@ -61,7 +61,7 @@ struct Test2
 void callObjectTest()
 {
     Test2 t;
-    void (Test2:: * func_ptr)(int, string) = &Test2::print;
+    void (Test2:: * func_ptr)(int, string) = Test2::print;
     (t.*func_ptr)(1, "tom");
 
     int Test2::* intPtr = &Test2::m_num;
@@ -191,4 +191,5 @@ int main()
     functionTest();
 	return 0;
 }
+#elif 0
 #endif
