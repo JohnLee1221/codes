@@ -55,6 +55,12 @@
         "tuple": "cpp",
         "future": "cpp",
         "mutex": "cpp",
-        "cinttypes": "cpp"
-    }
+        "cinttypes": "cpp",
+        "cstring": "cpp",
+        "dense": "cpp",
+        "geometry": "cpp",
+        "core": "cpp",
+        "complex": "cpp"
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}/g++"
 }

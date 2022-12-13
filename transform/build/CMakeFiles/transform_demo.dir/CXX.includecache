@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lzh/Documents/daliy_codes/codes/transform/test.cpp
+transform.h
+/home/lzh/Documents/daliy_codes/codes/transform/transform.h
+
+/home/lzh/Documents/daliy_codes/codes/transform/transform.cpp
+iostream
+-
+yaml-cpp/yaml.h
+-
+transform.h
+/home/lzh/Documents/daliy_codes/codes/transform/transform.h
+
+/home/lzh/Documents/daliy_codes/codes/transform/transform.h
+eigen3/Eigen/Dense
+-
+eigen3/Eigen/Geometry
+-
+functional
+-
+iostream
+-
+map
+-
+math.h
+-
+queue
+-
+stack
+-
+vector
+-
+

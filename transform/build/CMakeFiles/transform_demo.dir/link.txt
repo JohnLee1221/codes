@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/transform_demo.dir/test.cpp.o CMakeFiles/transform_demo.dir/transform.cpp.o  -o transform_demo  /usr/lib/x86_64-linux-gnu/libyaml-cpp.so.0.6.2 
