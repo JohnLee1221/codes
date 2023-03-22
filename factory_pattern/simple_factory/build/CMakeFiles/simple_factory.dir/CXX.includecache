@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/factory.h
+iostream
+-
+phone.h
+../include/phone.h
+
+../include/phone.h
+iostream
+-
+
+/home/lzh/Documents/daliy_codes/codes/factory_pattern.cpp/simple_factory/main.cpp
+iostream
+-
+memory
+-
+phone.h
+/home/lzh/Documents/daliy_codes/codes/factory_pattern.cpp/simple_factory/phone.h
+factory.h
+/home/lzh/Documents/daliy_codes/codes/factory_pattern.cpp/simple_factory/factory.h
+

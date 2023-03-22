@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/phone.h
+iostream
+-
+
+/home/lzh/Documents/daliy_codes/codes/factory_pattern.cpp/simple_factory/main.cpp
+iostream
+-
+phone.h
+/home/lzh/Documents/daliy_codes/codes/factory_pattern.cpp/simple_factory/phone.h
+factory.cpp
+/home/lzh/Documents/daliy_codes/codes/factory_pattern.cpp/simple_factory/factory.cpp
+
+/home/lzh/Documents/daliy_codes/codes/factory_pattern.cpp/simple_factory/src/factory.cpp
+iostream
+-
+phone.h
+/home/lzh/Documents/daliy_codes/codes/factory_pattern.cpp/simple_factory/src/phone.h
+iphone.cpp
+/home/lzh/Documents/daliy_codes/codes/factory_pattern.cpp/simple_factory/src/iphone.cpp
+hw_phone.cpp
+/home/lzh/Documents/daliy_codes/codes/factory_pattern.cpp/simple_factory/src/hw_phone.cpp
+
+/home/lzh/Documents/daliy_codes/codes/factory_pattern.cpp/simple_factory/src/hw_phone.cpp
+iostream
+-
+phone.h
+/home/lzh/Documents/daliy_codes/codes/factory_pattern.cpp/simple_factory/src/phone.h
+
+/home/lzh/Documents/daliy_codes/codes/factory_pattern.cpp/simple_factory/src/iphone.cpp
+iostream
+-
+phone.h
+/home/lzh/Documents/daliy_codes/codes/factory_pattern.cpp/simple_factory/src/phone.h
+

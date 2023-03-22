@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/lzh/Documents/daliy_codes/codes/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/demo.dir/hello.cpp.o -c /home/lzh/Documents/daliy_codes/codes/hello.cpp",
+  "file": "/home/lzh/Documents/daliy_codes/codes/hello.cpp"
+}
+]

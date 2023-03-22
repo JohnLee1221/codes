@@ -1,11 +1,13 @@
 #include <iostream>
 
-void func() {
-  std::string str1();
-
+void test(const std::string& s) {
+  std::cout << s << std::endl;
 }
 
 int main() {
-  func();
+  std::string str = "Hello";
+  const char* c = str.c_str();
+  test(c);
+
   return 0;
 }

@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/apple.h
+iostream
+-
+product.h
+../include/product.h
+
+../include/hawei.h
+iostream
+-
+product.h
+../include/product.h
+
+../include/product.h
+iostream
+-
+
+/home/lzh/Documents/daliy_codes/codes/factory_pattern/factory_method/main.cpp
+memory
+-
+product.h
+/home/lzh/Documents/daliy_codes/codes/factory_pattern/factory_method/product.h
+apple.h
+/home/lzh/Documents/daliy_codes/codes/factory_pattern/factory_method/apple.h
+hawei.h
+/home/lzh/Documents/daliy_codes/codes/factory_pattern/factory_method/hawei.h
+

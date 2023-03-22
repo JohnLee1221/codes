@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/demo.dir/main.cpp.o CMakeFiles/demo.dir/src/apple.cpp.o CMakeFiles/demo.dir/src/hawei.cpp.o  -o demo 

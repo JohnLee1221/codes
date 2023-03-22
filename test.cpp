@@ -1,25 +1,20 @@
-#include<iostream>
-#include<limits>
-using namespace std;
+#include <iostream>
+#include <vector>
+#include <cassert>
+#include <memory>
 
-class Person
-{
-public:
-    Person(int a)
-    {
-        cout<<"construct function"<<"\t"<<a<<endl;
-    }
+void test(const int &a) {
+  int b = 200;
+  const int* ptr = &a;
+  ptr = &b;
+  std::cout << *ptr << std::endl;
+}
 
-    Person* test()
-    {
-        return this;
-    }
-};
+int main() {
+  int a = 100;
+  int *ptr = &a;
 
-int main()
-{
-    Person p = Person(100);
-    Person(10).test();
+  test(*ptr);
 
-    return 0;
+  return 0;
 }

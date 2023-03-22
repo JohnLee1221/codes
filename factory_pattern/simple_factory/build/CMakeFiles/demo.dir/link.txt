@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/demo.dir/main.cpp.o CMakeFiles/demo.dir/src/factory.cpp.o CMakeFiles/demo.dir/src/hw_phone.cpp.o CMakeFiles/demo.dir/src/iphone.cpp.o  -o demo 

@@ -1,0 +1,3 @@
+/home/lzh/Documents/daliy_codes/codes/factory_pattern.cpp/simple_factory/build/CMakeFiles/rebuild_cache.dir
+/home/lzh/Documents/daliy_codes/codes/factory_pattern.cpp/simple_factory/build/CMakeFiles/edit_cache.dir
+/home/lzh/Documents/daliy_codes/codes/factory_pattern.cpp/simple_factory/build/CMakeFiles/simple_factory.dir

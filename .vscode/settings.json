@@ -60,7 +60,17 @@
         "dense": "cpp",
         "geometry": "cpp",
         "core": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "unordered_set": "cpp",
+        "cassert": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp",
+        "strstream": "cpp",
+        "bitset": "cpp",
+        "iomanip": "cpp",
+        "cfenv": "cpp",
+        "typeindex": "cpp",
+        "variant": "cpp"
     },
-    "cmake.sourceDirectory": "${workspaceFolder}/g++"
+    "cmake.sourceDirectory": "${workspaceFolder}/."
 }
