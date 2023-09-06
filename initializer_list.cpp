@@ -11,7 +11,8 @@ void print(std::initializer_list<std::string> msg) {
 }
 
 int main() {
-  std::initializer_list<std::string> init_list = {"0", "1" ,"2", "3", "4", "5", "6", "7"};
+  // std::initializer_list<std::string> init_list = {"0", "1" ,"2", "3", "4", "5", "6", "7"};
+  std::initializer_list<std::string> init_list {"0", "1" ,"2", "3", "4", "5", "6", "7"};
   print(init_list);
   
   return 0;

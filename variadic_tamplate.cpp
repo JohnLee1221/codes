@@ -2,23 +2,23 @@
 
 void print() {}
 
-template<typename T, typename... Types>
+template <typename T, typename... Types>
 void print(const T& firstArg, const Types... args) {
   std::cout << sizeof...(args) << "\t" << firstArg <<std::endl;
   print(args...);
 }
 
-template<typename T>
+template <typename T>
 T my_max(T value) {
   return value;
 }
 
-template<typename T, typename... Types>
+template <typename T, typename... Types>
 T my_max(const T& firstArg, const Types... Tail) {
   return std::max(firstArg, my_max(Tail...));
 }
 
-template<typename... Values> class tuple;
+template <typename... Values> class tuple;
 template<> class tuple<> {};
 
 template<typename Head, typename... Tail>

@@ -70,7 +70,9 @@
         "iomanip": "cpp",
         "cfenv": "cpp",
         "typeindex": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "any": "cpp"
     },
-    "cmake.sourceDirectory": "${workspaceFolder}/."
+    "cmake.sourceDirectory": "${workspaceFolder}/.",
+    "C_Cpp.errorSquiggles": "enabled"
 }

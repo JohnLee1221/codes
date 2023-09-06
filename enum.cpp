@@ -1,6 +1,6 @@
 #include <iostream>
 
-enum class Color {
+enum Color {
   RED,
   BLUE,
   GREEN
@@ -11,7 +11,7 @@ int main()
 {
   Color key = Color::RED;
   switch (key) {
-    case Color::RED:
+    case RED:
       std::cout << "1" << std::endl;
       break;
     case Color::BLUE:

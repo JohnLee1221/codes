@@ -18,7 +18,7 @@ public:
 };
 
 template <typename IdentifierType, class AbstractProduct,
-          class ProductCreator = AbstractProduct *(*)(),
+          class ProductCreator = AbstractProduct* (*)(),
           class MapContainer = std::map<IdentifierType, ProductCreator>>
 class Factory {
 public:

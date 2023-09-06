@@ -1,0 +1,9 @@
+@startuml
+class Data2Log {
+  - file_name_ : std::string
+  - op_file_ : std::ofstream
+  + void operator()(const Data& data)
+  - void Init()
+  - std::string GetTimeStamp()
+}
+@enduml

@@ -11,10 +11,5 @@ void test(const int &a) {
 }
 
 int main() {
-  int a = 100;
-  int *ptr = &a;
-
-  test(*ptr);
-
-  return 0;
+  std::cout << __cplusplus << std::endl;
 }
