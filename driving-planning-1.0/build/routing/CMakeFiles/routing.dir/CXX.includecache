@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../common/pnc_point.h
+
+../routing/routing_path.h
+common/pnc_point.h
+../routing/common/pnc_point.h
+vector
+-
+
+/home/lzh/driving-planning-1.0/routing/routing_path.cpp
+routing/routing_path.h
+/home/lzh/driving-planning-1.0/routing/routing/routing_path.h
+common/pnc_point.h
+/home/lzh/driving-planning-1.0/routing/common/pnc_point.h
+fstream
+-
+iostream
+-
+sstream
+-
+string
+-
+

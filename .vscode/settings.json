@@ -71,7 +71,9 @@
         "cfenv": "cpp",
         "typeindex": "cpp",
         "variant": "cpp",
-        "any": "cpp"
+        "any": "cpp",
+        "eigen": "cpp",
+        "*.tpp": "cpp"
     },
     "cmake.sourceDirectory": "${workspaceFolder}/.",
     "C_Cpp.errorSquiggles": "enabled"

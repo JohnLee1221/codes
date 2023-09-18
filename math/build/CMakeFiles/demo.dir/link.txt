@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/demo.dir/osqp_solver.cpp.o  -o demo  -Wl,-rpath,/usr/local/lib /usr/local/lib/libOsqpEigen.so.0.8.1 /usr/local/lib/libosqp.so 

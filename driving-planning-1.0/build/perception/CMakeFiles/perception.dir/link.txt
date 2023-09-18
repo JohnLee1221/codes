@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libperception.a  CMakeFiles/perception.dir/perception_obstacle.cc.o
+/usr/bin/ranlib ../lib/libperception.a

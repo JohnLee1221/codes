@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lzh/Documents/codes/math/osqp_solver.cpp
+iostream
+-
+eigen3/Eigen/Dense
+-
+eigen3/Eigen/Eigen
+-
+OsqpEigen/OsqpEigen.h
+-
+

@@ -18,12 +18,10 @@ int main() {
   std::string str = R"(<html>
         <head>
         <title>
-        海贼王
         </title>
         </head>
         <body>
         <p>
-        我是要成为海贼王的男人!!!
         </p>
         </body>
         </html>)";
@@ -41,7 +39,6 @@ int main() {
             << "world"
             << "lalala"
             << std::endl;
-
 
   return 0;
 }

@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libreference_line_provider.a  CMakeFiles/reference_line_provider.dir/reference_line.cc.o CMakeFiles/reference_line_provider.dir/reference_line_provider.cc.o CMakeFiles/reference_line_provider.dir/reference_line_smoother.cc.o
+/usr/bin/ranlib ../lib/libreference_line_provider.a

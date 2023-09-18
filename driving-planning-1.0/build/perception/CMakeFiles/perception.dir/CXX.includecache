@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../common/pnc_point.h
+
+/home/lzh/driving-planning-1.0/perception/perception_obstacle.cc
+perception_obstacle.h
+/home/lzh/driving-planning-1.0/perception/perception_obstacle.h
+
+/home/lzh/driving-planning-1.0/perception/perception_obstacle.h
+common/pnc_point.h
+/home/lzh/driving-planning-1.0/perception/common/pnc_point.h
+math.h
+-
+vector
+-
+

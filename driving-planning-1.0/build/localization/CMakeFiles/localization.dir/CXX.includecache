@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../EMPlanner/trajectory.h
+common/pnc_point.h
+../EMPlanner/common/pnc_point.h
+vector
+-
+
+../common/pnc_point.h
+
+/home/lzh/driving-planning-1.0/localization/localization_estimate.cc
+localization_estimate.h
+/home/lzh/driving-planning-1.0/localization/localization_estimate.h
+
+/home/lzh/driving-planning-1.0/localization/localization_estimate.h
+EMPlanner/trajectory.h
+/home/lzh/driving-planning-1.0/localization/EMPlanner/trajectory.h
+math.h
+-
+

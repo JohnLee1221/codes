@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/liblocalization.a  CMakeFiles/localization.dir/localization_estimate.cc.o
+/usr/bin/ranlib ../lib/liblocalization.a

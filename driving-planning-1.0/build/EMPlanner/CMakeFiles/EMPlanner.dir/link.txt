@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libEMPlanner.a  CMakeFiles/EMPlanner.dir/EMPlanner.cc.o CMakeFiles/EMPlanner.dir/path_time_graph.cc.o CMakeFiles/EMPlanner.dir/speed_time_graph.cc.o CMakeFiles/EMPlanner.dir/trajectory.cc.o
+/usr/bin/ranlib ../lib/libEMPlanner.a

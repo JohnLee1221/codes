@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/librouting.a  CMakeFiles/routing.dir/routing_path.cpp.o
+/usr/bin/ranlib ../lib/librouting.a
